@@ -108,3 +108,16 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.controls').style.display = 'flex';
     });
 });
+
+function changeTheme() {
+    const body = document.body;
+    const icon = document.querySelector('.controls button i');
+    
+    if (body.classList.contains('theme-dark')) {
+        body.classList.replace('theme-dark', 'theme-rose');
+        icon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+        body.classList.replace('theme-rose', 'theme-dark');
+        icon.classList.replace('fa-sun', 'fa-moon');
+    }
+}
